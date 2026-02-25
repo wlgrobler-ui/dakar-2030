@@ -1,58 +1,162 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<title>Dakar 2030 Countdown</title>
+<title>Journey to Dakar 2030</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
-    body {
-        margin: 0;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: black;
-        color: #f5c518;
-        font-family: Arial, sans-serif;
-        text-align: center;
-    }
-    h1 {
-        font-size: 2rem;
-        margin-bottom: 20px;
-    }
-    #countdown {
-        font-size: 2.5rem;
-        font-weight: bold;
-    }
+body {
+    margin:0;
+    font-family: Arial, sans-serif;
+    background: #0d0d0d;
+    color: #f5c518;
+}
+
+header {
+    text-align:center;
+    padding:20px;
+    background:black;
+}
+
+h1 {
+    margin:0;
+}
+
+.section {
+    padding:20px;
+    border-bottom:1px solid #222;
+}
+
+.card {
+    background:#111;
+    padding:15px;
+    margin-top:10px;
+    border-radius:8px;
+}
+
+input {
+    width:100%;
+    padding:8px;
+    margin-top:5px;
+    background:#222;
+    border:none;
+    color:#f5c518;
+}
+
+.progress-bar {
+    background:#222;
+    border-radius:10px;
+    overflow:hidden;
+    margin-top:10px;
+}
+
+.progress {
+    height:20px;
+    background:#f5c518;
+    width:0%;
+}
 </style>
 </head>
+
 <body>
 
-<h1>🏁 Dakar 2030 Privateer Mission</h1>
-<div id="countdown"></div>
+<header>
+    <h1>🏁 Willem Grobler</h1>
+    <h2>Journey to Dakar 2030 – Age 50 Privateer</h2>
+</header>
+
+<div class="section">
+    <h3>⏳ Countdown to Dakar 2030</h3>
+    <div class="card" id="countdown"></div>
+</div>
+
+<div class="section">
+    <h3>💰 Financial Target Tracker (R4,000,000 Goal)</h3>
+    <div class="card">
+        <label>Amount Saved (R)</label>
+        <input type="number" id="saved" placeholder="Enter amount saved">
+        <div class="progress-bar">
+            <div class="progress" id="financeProgress"></div>
+        </div>
+        <div id="financeText"></div>
+    </div>
+</div>
+
+<div class="section">
+    <h3>🏋️ Training Commitment (Weekly Hours Goal: 10)</h3>
+    <div class="card">
+        <label>Hours Trained This Week</label>
+        <input type="number" id="training">
+        <div class="progress-bar">
+            <div class="progress" id="trainingProgress"></div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h3>🏍 Rally Qualification Plan</h3>
+    <div class="card">
+        <ul>
+            <li>2026 – Local Rally Series</li>
+            <li>2027 – African Cross Country Events</li>
+            <li>2028 – International Rally Raid</li>
+            <li>2029 – Dakar Qualification</li>
+        </ul>
+    </div>
+</div>
+
+<div class="section">
+    <h3>🤝 Sponsor Pipeline</h3>
+    <div class="card">
+        <input type="text" placeholder="Add potential sponsor">
+    </div>
+</div>
+
+<div class="section">
+    <h3>🎯 Mission Statement</h3>
+    <div class="card">
+        “At 50, I will stand on the Dakar start line as a privateer — earned, prepared, and relentless.”
+    </div>
+</div>
 
 <script>
+
+// Countdown
 const targetDate = new Date("January 5, 2030 00:00:00").getTime();
 
 function updateCountdown() {
     const now = new Date().getTime();
     const distance = targetDate - now;
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    const days = Math.floor(distance / (1000*60*60*24));
+    const hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
+    const minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
+    const seconds = Math.floor((distance % (1000*60)) / 1000);
 
     document.getElementById("countdown").innerHTML =
         days + " Days " + hours + "h " + minutes + "m " + seconds + "s";
-
-    if (distance < 0) {
-        document.getElementById("countdown").innerHTML = "IT'S TIME.";
-    }
 }
 
 setInterval(updateCountdown, 1000);
+
+// Finance Tracker
+const financeGoal = 4000000;
+document.getElementById("saved").addEventListener("input", function() {
+    const saved = this.value;
+    const percentage = (saved / financeGoal) * 100;
+    document.getElementById("financeProgress").style.width = percentage + "%";
+    document.getElementById("financeText").innerText =
+        Math.floor(percentage) + "% of R4,000,000 Goal";
+});
+
+// Training Tracker
+document.getElementById("training").addEventListener("input", function() {
+    const hours = this.value;
+    const percentage = (hours / 10) * 100;
+    document.getElementById("trainingProgress").style.width = percentage + "%";
+});
+
 </script>
 
 </body>
