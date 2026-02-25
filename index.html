@@ -2,17 +2,27 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Journey to Dakar 2030 – Willem Grobler</title>
+<title>Earn The Start Line – Journey to Dakar 2030</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 
 body {
     margin:0;
-    font-family: 'Segoe UI', sans-serif;
+    font-family:'Segoe UI', sans-serif;
     background:#0a0a0a;
     color:white;
     line-height:1.6;
+}
+
+section {
+    padding:90px 20px;
+    max-width:1100px;
+    margin:auto;
+}
+
+h1,h2,h3 {
+    color:#f5c518;
 }
 
 .hero {
@@ -30,15 +40,15 @@ body {
 }
 
 .hero h1 {
-    font-size:52px;
+    font-size:60px;
     margin:0;
-    color:#f5c518;
-    letter-spacing:2px;
+    letter-spacing:3px;
 }
 
-.hero h2 {
-    font-weight:300;
-    margin-top:15px;
+.hero p {
+    font-size:20px;
+    margin-top:20px;
+    max-width:700px;
 }
 
 .button {
@@ -51,21 +61,11 @@ body {
     border-radius:6px;
 }
 
-.section {
-    padding:80px 20px;
-    max-width:1100px;
-    margin:auto;
-}
-
-.section h2 {
-    color:#f5c518;
-    margin-bottom:30px;
-}
-
 .grid {
     display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:30px;
+    margin-top:40px;
 }
 
 .card {
@@ -81,9 +81,50 @@ body {
     transform:translateY(-5px);
 }
 
-.footer {
+.dashboard-box {
     text-align:center;
-    padding:40px;
+    font-size:28px;
+    margin-top:20px;
+}
+
+.progress-bar {
+    background:#222;
+    border-radius:10px;
+    height:20px;
+    margin-top:20px;
+    overflow:hidden;
+}
+
+.progress {
+    background:#f5c518;
+    height:100%;
+    width:25%;
+}
+
+.countdown-grid {
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:15px;
+    margin-top:40px;
+    text-align:center;
+}
+
+.time-box {
+    background:#111;
+    padding:20px;
+    border-radius:8px;
+}
+
+.time-box span {
+    display:block;
+    font-size:32px;
+    font-weight:bold;
+    color:#f5c518;
+}
+
+footer {
+    text-align:center;
+    padding:50px;
     background:black;
     border-top:1px solid #222;
 }
@@ -96,139 +137,170 @@ body {
 <!-- HERO -->
 
 <div class="hero">
-<h1>JOURNEY TO DAKAR 2030</h1>
-<h2>Age 50. Privateer. Earned.</h2>
-<a href="#partner" class="button">Partner With This Campaign</a>
+<h1>Earn The Start Line.</h1>
+<p>
+A four-year strategic leadership campaign grounded in disciplined execution and gratitude —
+culminating in entry into the Dakar Rally at age 50.
+</p>
+<a href="#support" class="button">Partner With This Campaign</a>
 </div>
 
-<!-- MISSION -->
+<!-- WHY -->
 
-<div class="section">
-<h2>The Mission</h2>
+<section>
+<h2>Stewardship Over Ego</h2>
 <p>
-At 50 years old, I will stand on the start line of the Dakar Rally as a privateer.
-This is not impulsive ambition — it is a structured four-year performance campaign
-built on discipline, financial execution, skill development, and progressive qualification.
+Journey to Dakar 2030 is grounded in gratitude — for health, family, provision,
+opportunity, and the capacity to pursue something difficult.
 </p>
-
 <p>
-This journey combines executive leadership, endurance sport, and long-term strategic planning.
-Every kilometer is earned. Every milestone is intentional.
+The objective is not merely to finish a race, but to earn the right to stand
+on the Dakar start line at 50 through disciplined preparation,
+capital responsibility, and non-negotiable standards.
 </p>
-</div>
+</section>
 
-<!-- CAMPAIGN ROADMAP -->
+<!-- LEADERSHIP THESIS -->
 
-<div class="section">
+<section>
+<h2>Discipline Compounds.</h2>
+<p>
+Performance does not expire with age. It compounds when experience,
+structure, and discipline align.
+</p>
+<p>
+This campaign operates under real-world constraints:
+executive responsibility, family leadership, financial accountability,
+and skill acquisition from zero.
+</p>
+</section>
+
+<!-- ROADMAP -->
+
+<section>
 <h2>Campaign Roadmap</h2>
-
 <div class="grid">
-
 <div class="card">
-<h3>2026 – Foundation Year</h3>
-<p>
-• Learn and master off-road riding fundamentals<br>
-• Complete structured off-road training programs<br>
-• Enter beginner-level rally / navigation events<br>
-• Scale personal earnings to fund subsequent years<br>
-• Build physical conditioning base
-</p>
+<h3>2026 – Foundation</h3>
+<p>Off-road mastery, navigation training, financial scaling.</p>
 </div>
-
 <div class="card">
-<h3>2027 – Competitive Development</h3>
-<p>
-• Compete in South African cross-country events<br>
-• Advance roadbook navigation skills<br>
-• Develop multi-day endurance capability<br>
-• Formalize sponsor discussions<br>
-• Achieve 30–40% campaign funding target
-</p>
+<h3>2027 – Development</h3>
+<p>South African cross-country events, endurance building.</p>
 </div>
-
 <div class="card">
-<h3>2028 – International Exposure</h3>
-<p>
-• Enter African / international rally raids<br>
-• Simulate Dakar-style multi-stage events<br>
-• Refine professional bike setup<br>
-• Accelerate structured media output<br>
-• Reach 70% campaign funding target
-</p>
+<h3>2028 – Exposure</h3>
+<p>International rally participation, media acceleration.</p>
 </div>
-
 <div class="card">
-<h3>2029 – Qualification & Execution</h3>
-<p>
-• Complete Dakar qualification requirements<br>
-• Final technical and navigation preparation<br>
-• Confirm logistics & service structure<br>
-• Secure full campaign funding<br>
-• Official Dakar entry submission
-</p>
+<h3>2029 – Qualification</h3>
+<p>Dakar qualification completion and logistical execution.</p>
 </div>
-
-</div>
-</div>
-
-<!-- WHY 50 -->
-
-<div class="section">
-<h2>Why 50?</h2>
-<p>
-Because performance does not expire.
-Because leadership is demonstrated under pressure.
-Because resilience is built over decades.
-</p>
-
-<p>
-This campaign represents long-term discipline — not midlife reaction.
-It demonstrates that structured execution, physical preparation,
-and strategic planning can redefine what is possible at 50.
-</p>
-</div>
-
-<!-- PARTNERSHIP -->
-
-<div class="section" id="partner">
-<h2>Partnership Opportunities</h2>
-
-<p>
-This four-year campaign offers brands long-term alignment in endurance,
-high-performance culture, resilience, and leadership.
-</p>
-
-<div class="grid">
-
 <div class="card">
-<h3>Brand Exposure</h3>
-<p>Multi-year storytelling across digital, live events, and rally participation.</p>
+<h3>2030 – Earn The Start Line</h3>
+<p>Gratitude. Readiness. Stewardship fulfilled.</p>
 </div>
-
-<div class="card">
-<h3>Executive Engagement</h3>
-<p>Corporate leadership crossover through keynote speaking and internal motivation sessions.</p>
 </div>
+</section>
 
-<div class="card">
-<h3>Media Value</h3>
-<p>Structured content documenting preparation, adversity, and execution.</p>
+<!-- GOVERNANCE -->
+
+<section>
+<h2>Governance & Structure</h2>
+<p>
+This is not a hobby project. The campaign operates under executive governance principles:
+</p>
+<ul>
+<li>Defined capital envelope (R3m–R5m projected)</li>
+<li>Milestone-based funding strategy</li>
+<li>Measured performance KPIs</li>
+<li>Risk mitigation planning</li>
+<li>Transparent reporting to partners</li>
+</ul>
+</section>
+
+<!-- COUNTDOWN -->
+
+<section>
+<h2>Countdown to Dakar 2030</h2>
+<div class="countdown-grid">
+<div class="time-box"><span id="years">0</span>Years</div>
+<div class="time-box"><span id="days">0</span>Days</div>
+<div class="time-box"><span id="hours">0</span>Hours</div>
+<div class="time-box"><span id="minutes">0</span>Minutes</div>
+<div class="time-box"><span id="seconds">0</span>Seconds</div>
 </div>
+</section>
 
+<!-- PUBLIC DASHBOARD -->
+
+<section>
+<h2>Public Progress</h2>
+<div class="dashboard-box">
+25% Campaign Funded
 </div>
+<div class="progress-bar">
+<div class="progress"></div>
+</div>
+</section>
 
-<p style="margin-top:40px;">
-For partnership discussions: <br>
-<strong>Email:</strong> wlgrobler@email.com
+<!-- SUPPORT -->
+
+<section id="support">
+<h2>Support The Campaign</h2>
+<p>
+Public support contributes to training development,
+rally participation, equipment acquisition, and qualification logistics.
+</p>
+<p>
+This is not funding a dream. This is supporting disciplined,
+long-term leadership execution.
 </p>
 
-</div>
+<a href="https://your-crowdfunding-link.com" target="_blank" class="button">
+Support This Journey
+</a>
+</section>
 
-<!-- FOOTER -->
+<footer>
+<p>© Willem Grobler – Earn The Start Line – Journey to Dakar 2030</p>
+</footer>
 
-<div class="footer">
-<p>© Willem Grobler – Journey to Dakar 2030</p>
-</div>
+<script>
+
+const targetDate = new Date("January 5, 2030 00:00:00").getTime();
+
+function updateCountdown() {
+    const now = new Date().getTime();
+    let diff = targetDate - now;
+
+    if(diff <= 0) return;
+
+    const seconds = Math.floor(diff/1000) % 60;
+    const minutes = Math.floor(diff/(1000*60)) % 60;
+    const hours = Math.floor(diff/(1000*60*60)) % 24;
+    const daysTotal = Math.floor(diff/(1000*60*60*24));
+
+    const nowDate = new Date();
+    const target = new Date(targetDate);
+    let years = target.getFullYear() - nowDate.getFullYear();
+
+    const thisYearTarget = new Date(nowDate.getFullYear()+years, target.getMonth(), target.getDate());
+    if(nowDate > thisYearTarget) years--;
+
+    const adjustedDate = new Date(nowDate.getFullYear()+years, nowDate.getMonth(), nowDate.getDate());
+    const remainingDays = Math.floor((target - adjustedDate)/(1000*60*60*24));
+
+    document.getElementById("years").innerText = years;
+    document.getElementById("days").innerText = remainingDays;
+    document.getElementById("hours").innerText = hours;
+    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("seconds").innerText = seconds;
+}
+
+setInterval(updateCountdown,1000);
+
+</script>
 
 </body>
 </html>
