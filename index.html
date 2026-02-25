@@ -2,162 +2,153 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Journey to Dakar 2030</title>
+<title>Journey to Dakar 2030 – Willem Grobler</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+
 body {
     margin:0;
-    font-family: Arial, sans-serif;
-    background: #0d0d0d;
-    color: #f5c518;
+    font-family: 'Segoe UI', sans-serif;
+    background:#0a0a0a;
+    color:white;
 }
 
-header {
+.hero {
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
     text-align:center;
-    padding:20px;
-    background:black;
+    background:
+    linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85)),
+    url('hero.jpg');
+    background-size:cover;
+    background-position:center;
 }
 
-h1 {
+.hero h1 {
+    font-size:52px;
     margin:0;
+    color:#f5c518;
+    letter-spacing:2px;
+}
+
+.hero h2 {
+    font-weight:300;
+    margin-top:15px;
+}
+
+.button {
+    margin-top:30px;
+    padding:15px 35px;
+    background:#f5c518;
+    color:black;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:6px;
 }
 
 .section {
-    padding:20px;
-    border-bottom:1px solid #222;
+    padding:80px 20px;
+    max-width:1100px;
+    margin:auto;
+}
+
+.section h2 {
+    color:#f5c518;
+}
+
+.grid {
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+    margin-top:40px;
 }
 
 .card {
     background:#111;
-    padding:15px;
-    margin-top:10px;
-    border-radius:8px;
-}
-
-input {
-    width:100%;
-    padding:8px;
-    margin-top:5px;
-    background:#222;
-    border:none;
-    color:#f5c518;
-}
-
-.progress-bar {
-    background:#222;
+    padding:30px;
     border-radius:10px;
-    overflow:hidden;
-    margin-top:10px;
 }
 
-.progress {
-    height:20px;
-    background:#f5c518;
-    width:0%;
+.footer {
+    text-align:center;
+    padding:40px;
+    background:black;
+    border-top:1px solid #222;
 }
+
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>🏁 Willem Grobler</h1>
-    <h2>Journey to Dakar 2030 – Age 50 Privateer</h2>
-</header>
-
-<div class="section">
-    <h3>⏳ Countdown to Dakar 2030</h3>
-    <div class="card" id="countdown"></div>
+<div class="hero">
+<h1>JOURNEY TO DAKAR 2030</h1>
+<h2>Age 50. Privateer. Earned.</h2>
+<a href="#partner" class="button">Partner With This Campaign</a>
 </div>
 
 <div class="section">
-    <h3>💰 Financial Target Tracker (R4,000,000 Goal)</h3>
-    <div class="card">
-        <label>Amount Saved (R)</label>
-        <input type="number" id="saved" placeholder="Enter amount saved">
-        <div class="progress-bar">
-            <div class="progress" id="financeProgress"></div>
-        </div>
-        <div id="financeText"></div>
-    </div>
+<h2>The Mission</h2>
+<p>
+At 50 years old, I will stand on the start line of the Dakar Rally as a privateer.
+This is a structured 4-year performance campaign built on discipline, leadership,
+and execution. Every kilometer is earned.
+</p>
 </div>
 
 <div class="section">
-    <h3>🏋️ Training Commitment (Weekly Hours Goal: 10)</h3>
-    <div class="card">
-        <label>Hours Trained This Week</label>
-        <input type="number" id="training">
-        <div class="progress-bar">
-            <div class="progress" id="trainingProgress"></div>
-        </div>
-    </div>
+<h2>Campaign Roadmap</h2>
+<div class="grid">
+<div class="card">
+<h3>2026</h3>
+<p>South African Rally Series participation</p>
+</div>
+<div class="card">
+<h3>2027</h3>
+<p>African Cross-Country events</p>
+</div>
+<div class="card">
+<h3>2028</h3>
+<p>International Rally Raid experience</p>
+</div>
+<div class="card">
+<h3>2029</h3>
+<p>Dakar Qualification & Technical Preparation</p>
+</div>
+</div>
 </div>
 
-<div class="section">
-    <h3>🏍 Rally Qualification Plan</h3>
-    <div class="card">
-        <ul>
-            <li>2026 – Local Rally Series</li>
-            <li>2027 – African Cross Country Events</li>
-            <li>2028 – International Rally Raid</li>
-            <li>2029 – Dakar Qualification</li>
-        </ul>
-    </div>
+<div class="section" id="partner">
+<h2>Partnership Opportunities</h2>
+<p>
+This campaign offers long-term brand alignment in endurance, leadership,
+high-performance culture, and executive resilience.
+</p>
+
+<div class="grid">
+<div class="card">
+<h3>Brand Exposure</h3>
+<p>4-year storytelling journey across digital and live events.</p>
+</div>
+<div class="card">
+<h3>Executive Engagement</h3>
+<p>Leadership keynote crossover and corporate motivation sessions.</p>
+</div>
+<div class="card">
+<h3>Media Value</h3>
+<p>Structured content campaign documenting preparation and race execution.</p>
+</div>
 </div>
 
-<div class="section">
-    <h3>🤝 Sponsor Pipeline</h3>
-    <div class="card">
-        <input type="text" placeholder="Add potential sponsor">
-    </div>
 </div>
 
-<div class="section">
-    <h3>🎯 Mission Statement</h3>
-    <div class="card">
-        “At 50, I will stand on the Dakar start line as a privateer — earned, prepared, and relentless.”
-    </div>
+<div class="footer">
+<p>© Willem Grobler – Journey to Dakar 2030</p>
 </div>
-
-<script>
-
-// Countdown
-const targetDate = new Date("January 5, 2030 00:00:00").getTime();
-
-function updateCountdown() {
-    const now = new Date().getTime();
-    const distance = targetDate - now;
-
-    const days = Math.floor(distance / (1000*60*60*24));
-    const hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
-    const minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
-    const seconds = Math.floor((distance % (1000*60)) / 1000);
-
-    document.getElementById("countdown").innerHTML =
-        days + " Days " + hours + "h " + minutes + "m " + seconds + "s";
-}
-
-setInterval(updateCountdown, 1000);
-
-// Finance Tracker
-const financeGoal = 4000000;
-document.getElementById("saved").addEventListener("input", function() {
-    const saved = this.value;
-    const percentage = (saved / financeGoal) * 100;
-    document.getElementById("financeProgress").style.width = percentage + "%";
-    document.getElementById("financeText").innerText =
-        Math.floor(percentage) + "% of R4,000,000 Goal";
-});
-
-// Training Tracker
-document.getElementById("training").addEventListener("input", function() {
-    const hours = this.value;
-    const percentage = (hours / 10) * 100;
-    document.getElementById("trainingProgress").style.width = percentage + "%";
-});
-
-</script>
 
 </body>
 </html>
