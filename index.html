@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dakar 2030 Countdown</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: black;
+        color: #f5c518;
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    #countdown {
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<h1>🏁 Dakar 2030 Privateer Mission</h1>
+<div id="countdown"></div>
+
+<script>
+const targetDate = new Date("January 5, 2030 00:00:00").getTime();
+
+function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("countdown").innerHTML =
+        days + " Days " + hours + "h " + minutes + "m " + seconds + "s";
+
+    if (distance < 0) {
+        document.getElementById("countdown").innerHTML = "IT'S TIME.";
+    }
+}
+
+setInterval(updateCountdown, 1000);
+</script>
+
+</body>
+</html>
